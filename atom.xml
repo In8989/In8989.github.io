@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>웹 개발자 김철인 블로그</description>
+    <link>
+    https://In8989.github.io</link>
+    
+      
+      <item>
+        <title>Python - 연습하자2</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic1&quot;&gt;Python - 연습하자1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic2&quot;&gt;Python - 연습하자2 제어문&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 14 Sep 2012 08:37:00 +0900</pubDate>
+        <link>
+        https://In8989.github.io/python-basic2</link>
+        <guid isPermaLink="true">https://In8989.github.io/python-basic2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Python - 연습하자</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic1&quot;&gt;Python - 연습하자1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic2&quot;&gt;Python - 연습하자2 제어문&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Thu, 13 Sep 2012 08:37:00 +0900</pubDate>
+        <link>
+        https://In8989.github.io/python-basic1</link>
+        <guid isPermaLink="true">https://In8989.github.io/python-basic1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Jekyll 강좌(1) - 블로그 만들기</title>
+        
+          <description>&lt;p&gt;이 글은 jekyll basic 입니다……&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 13 Sep 2012 08:37:00 +0900</pubDate>
+        <link>
+        https://In8989.github.io/Jekyll-blog-maker</link>
+        <guid isPermaLink="true">https://In8989.github.io/Jekyll-blog-maker</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

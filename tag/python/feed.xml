@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://in8989.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://in8989.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-02-12T17:00:31+09:00</updated>
+  <id>https://in8989.github.io/tag/python/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">In8989 Blog | </title>
+  
+
+  
+    <subtitle>웹 개발자 김철인 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Python - 연습하자2</title>
+      <link href="https://in8989.github.io/python-basic2" rel="alternate" type="text/html" title="Python - 연습하자2" />
+      <published>2012-09-14T08:37:00+09:00</published>
+      <updated>2012-09-14T08:37:00+09:00</updated>
+      <id>https://in8989.github.io/python-basic2</id>
+      <content type="html" xml:base="https://in8989.github.io/python-basic2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic1&quot;&gt;Python - 연습하자1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic2&quot;&gt;Python - 연습하자2 제어문&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 글은 python 연습2 입니다……&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Kim CheolIn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python - 연습하자1 Python - 연습하자2 제어문</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Python - 연습하자</title>
+      <link href="https://in8989.github.io/python-basic1" rel="alternate" type="text/html" title="Python - 연습하자" />
+      <published>2012-09-13T08:37:00+09:00</published>
+      <updated>2012-09-13T08:37:00+09:00</updated>
+      <id>https://in8989.github.io/python-basic1</id>
+      <content type="html" xml:base="https://in8989.github.io/python-basic1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic1&quot;&gt;Python - 연습하자1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic2&quot;&gt;Python - 연습하자2 제어문&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 글은 python 연습 입니다……&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Kim CheolIn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python - 연습하자1 Python - 연습하자2 제어문</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
