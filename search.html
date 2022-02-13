@@ -11,7 +11,7 @@
 
 
 
-    <title>About</title>
+    <title>Search Result</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -46,33 +46,28 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="웹 개발자 김철인 블로그" />
     <link rel="shortcut icon" href="https://In8989.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://In8989.github.io/about/" />
+    <link rel="canonical" href="https://In8989.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="In8989 Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="About" />
-    <meta property="og:description" content="안녕하세요 김철인입니다.
-" />
-    <meta property="og:url" content="https://In8989.github.io/about/" />
+    <meta property="og:title" content="Search Result" />
+    <meta property="og:description" content="웹 개발자 김철인 블로그" />
+    <meta property="og:url" content="https://In8989.github.io/search" />
     <meta property="og:image" content="https://In8989.github.io/assets/built/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
-    <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="" />
-    <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="안녕하세요 김철인입니다.
-" />
+    <meta name="twitter:title" content="Search Result" />
+    <meta name="twitter:description" content="웹 개발자 김철인 블로그" />
     <meta name="twitter:url" content="https://In8989.github.io/" />
     <meta name="twitter:image" content="https://In8989.github.io/assets/built/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="In8989 Blog" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
-    <meta property="og:image:width" content="1400" />
-    <meta property="og:image:height" content="933" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
 
     <script type="application/ld+json">
 {
@@ -83,7 +78,7 @@
         "name": "In8989 Blog",
         "logo": "https://In8989.github.io/"
     },
-    "url": "https://In8989.github.io/about/",
+    "url": "https://In8989.github.io/search",
     "image": {
         "@type": "ImageObject",
         "url": "https://In8989.github.io/assets/built/images/blog-cover.jpg",
@@ -92,10 +87,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://In8989.github.io/about/"
+        "@id": "https://In8989.github.io/search"
     },
-    "description": "안녕하세요 김철인입니다.
-"
+    "description": "웹 개발자 김철인 블로그"
 }
     </script>
 
@@ -108,7 +102,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="About" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Search Result" href="/feed.xml" />
 
 
     <!--  google search console  -->
@@ -172,13 +166,53 @@ into the {body} of the default.hbs template -->
         <article class="post-full  post page no-image">
 
             <header class="post-full-header">
-                <h1 class="post-full-title">About</h1>
+                <h1 class="post-full-title">Search Result</h1>
             </header>
 
             
 
             <section class="post-full-content">
-                <p>안녕하세요 김철인입니다.</p>
+                <form action="/search" method="get" hidden="hidden">
+    <label for="search-box"></label>
+    <input type="text" id="search-box" name="query">
+</form>
+
+<ul class="mylist" id="search-results"></ul>
+
+<script>
+    window.store = {
+    
+    "python-basic2": {
+        "title": "Python - 연습하자2",
+            "author": "In8989",
+            "category": "",
+            "content": "Python 강좌는 여러 절로 구성되어 있습니다.     Python - 연습하자1    Python - 연습하자2 제어문이 글은 python 연습2 입니다……",
+        "url": "/python-basic2"
+    }
+    ,
+    
+    "python-basic1": {
+        "title": "Python - 연습하자",
+            "author": "In8989",
+            "category": "",
+            "content": "Python 강좌는 여러 절로 구성되어 있습니다.     Python - 연습하자1    Python - 연습하자2 제어문이 글은 python 연습 입니다……function syntaxHighlight(code) {   var foo = 'Hello World';   var bar = 100;}",
+        "url": "/python-basic1"
+    }
+    ,
+    
+    "jekyll-blog-maker": {
+        "title": "Jekyll 강좌(1) - 블로그 만들기",
+            "author": "In8989",
+            "category": "",
+            "content": "이 글은 jekyll basic 입니다……",
+        "url": "/Jekyll-blog-maker"
+    }
+    
+    
+    };
+</script>
+<script src="assets/js/lunr.js"></script>
+<script src="assets/js/search.js"></script>
 
             </section>
 
