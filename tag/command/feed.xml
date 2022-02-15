@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://in8989.github.io/tag/command/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://in8989.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-02-16T05:08:45+09:00</updated>
+  <id>https://in8989.github.io/tag/command/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">In8989 Blog | </title>
+  
+
+  
+    <subtitle>웹 개발자 김철인 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">GitHub(3) - 유용한 명령어</title>
+      <link href="https://in8989.github.io/github-command3" rel="alternate" type="text/html" title="GitHub(3) - 유용한 명령어" />
+      <published>2022-02-10T19:00:00+09:00</published>
+      <updated>2022-02-10T19:00:00+09:00</updated>
+      <id>https://in8989.github.io/github-command3</id>
+      <content type="html" xml:base="https://in8989.github.io/github-command3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;GitHub&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command1&quot;&gt;GitHub(1) - 자주쓰는 명령어&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command2&quot;&gt;GitHub(2) - 브랜치(Branch) 관리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command3&quot;&gt;GitHub(3) - 유용한 명령어&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;유용한-명령어&quot;&gt;유용한 명령어&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;cherry-pick&lt;/strong&gt; 와 &lt;strong&gt;tag&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# 원하는 commit 한 개 가져오기&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# github에 있는 commit 고유값 ( git log로 확인가능 )&lt;/span&gt;
+  git cherry-pick 고유값
+    
+  &lt;span class=&quot;c&quot;&gt;# commit 에 태그 추가&lt;/span&gt;
+  git tag &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; 태그명
+  &lt;span class=&quot;c&quot;&gt;# commit 에 태그 삭제&lt;/span&gt;
+  git tag &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; 태그명
+    
+  &lt;span class=&quot;c&quot;&gt;# cherry-pick, tag 사용하기&lt;/span&gt;
+  git cherry-pick 태그명
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;fetch&lt;/strong&gt;&lt;br /&gt;
+  &lt;strong&gt;git pull&lt;/strong&gt; 은 &lt;strong&gt;git fetch + git merge&lt;/strong&gt; 의 기능을 수행&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# 서버의 변경점을 별개의 브랜치로 만드는 것&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# FETCH_HEAD라는 별개의 브랜치에서 변경점을 확인 가능&lt;/span&gt;
+  git fetch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;stash&lt;/strong&gt; 와 &lt;strong&gt;unstash&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# 현재 변경사항 저장, git status 내역 비워짐&lt;/span&gt;
+  git stash
+  &lt;span class=&quot;c&quot;&gt;# stash 리스트 보기&lt;/span&gt;
+  git stash list
+  &lt;span class=&quot;c&quot;&gt;# 최근에 저장한 stash 복구&lt;/span&gt;
+  git stash apply
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;–assume-unchanged&lt;/strong&gt;
+  수정을 막아야 될 경우, 해당 파일의 추적을 막음&lt;/p&gt;
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# commit한 파일의 수정사항을 반영되지 않게 함&lt;/span&gt;
+  git update-index &lt;span class=&quot;nt&quot;&gt;--assume-unchanged&lt;/span&gt; 파일경로
+  &lt;span class=&quot;c&quot;&gt;# 다시 추적&lt;/span&gt;
+  git update-index &lt;span class=&quot;nt&quot;&gt;--no-assume-unchanged&lt;/span&gt; 파일경로
+  &lt;span class=&quot;c&quot;&gt;# 한 번에 추적&lt;/span&gt;
+  git update-index &lt;span class=&quot;nt&quot;&gt;--really-refresh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h6&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ZeroCho TV: &lt;a href=&quot;https://www.zerocho.com/&quot; target=&quot;_blank&quot;&gt;https://www.zerocho.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Kim CheolIn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="command" />
+      
+
+      
+        <summary type="html">GitHub GitHub(1) - 자주쓰는 명령어 GitHub(2) - 브랜치(Branch) 관리 GitHub(3) - 유용한 명령어</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">GitHub(2) - 브랜치(Branch) 관리</title>
+      <link href="https://in8989.github.io/github-command2" rel="alternate" type="text/html" title="GitHub(2) - 브랜치(Branch) 관리" />
+      <published>2022-02-10T19:00:00+09:00</published>
+      <updated>2022-02-10T19:00:00+09:00</updated>
+      <id>https://in8989.github.io/github-command2</id>
+      <content type="html" xml:base="https://in8989.github.io/github-command2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;GitHub&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command1&quot;&gt;GitHub(1) - 자주쓰는 명령어&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command2&quot;&gt;GitHub(2) - 브랜치(Branch) 관리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command3&quot;&gt;GitHub(3) - 유용한 명령어&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github-브랜치branch-관리&quot;&gt;GitHub 브랜치(Branch) 관리&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;branch&lt;/strong&gt;
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# branch 만들기&lt;/span&gt;
+  git branch 브랜치명
+  &lt;span class=&quot;c&quot;&gt;# 브랜치 확인하기 ( 현재 HEAD가 있는 브랜치 앞에 * 로 표시 됨 )&lt;/span&gt;
+  git branch
+  
+  &lt;span class=&quot;c&quot;&gt;# branch 선택하기 ( 선택한 branch로 HEAD 옮기기 )&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# 파일에 사용하면 Modified -&amp;gt; Unmodifed 상태로 변경&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# 브랜치에 사용하는 경우 브랜치간 전환&lt;/span&gt;
+  git checkout 브랜치명
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;merge&lt;/strong&gt; 와 &lt;strong&gt;rebase&lt;/strong&gt;&lt;br /&gt;
+  병합하는 기능은 같지만 commit log의 형태가 다르다
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# HEAD가 있는 곳으로 병합&lt;/span&gt;
+  git merge 브랜치명
+
+  &lt;span class=&quot;c&quot;&gt;# HEAD가 있는 곳으로 병합&lt;/span&gt;
+  git rebase 브랜치명
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h6&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ZeroCho TV: &lt;a href=&quot;https://www.zerocho.com/&quot; target=&quot;_blank&quot;&gt;https://www.zerocho.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Kim CheolIn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="command" />
+      
+
+      
+        <summary type="html">GitHub GitHub(1) - 자주쓰는 명령어 GitHub(2) - 브랜치(Branch) 관리 GitHub(3) - 유용한 명령어</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">GitHub(1) - 자주쓰는 명령어</title>
+      <link href="https://in8989.github.io/github-command1" rel="alternate" type="text/html" title="GitHub(1) - 자주쓰는 명령어" />
+      <published>2022-02-10T19:00:00+09:00</published>
+      <updated>2022-02-10T19:00:00+09:00</updated>
+      <id>https://in8989.github.io/github-command1</id>
+      <content type="html" xml:base="https://in8989.github.io/github-command1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;GitHub&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command1&quot;&gt;GitHub(1) - 자주쓰는 명령어&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command2&quot;&gt;GitHub(2) - 브랜치(Branch) 관리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github-command3&quot;&gt;GitHub(3) - 유용한 명령어&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github-자주쓰는-명령어&quot;&gt;GitHub 자주쓰는 명령어&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;remote&lt;/strong&gt;&lt;br /&gt;
+원격 저장소를 관리하는 명령어
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# 저장소 주소 등록&lt;/span&gt;
+  git remote add origin 저장소주소
+  &lt;span class=&quot;c&quot;&gt;# 저장소 주소 확인&lt;/span&gt;
+  git remote &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# 주소 수정&lt;/span&gt;
+  git remote set-url origin 저장소주소
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;push&lt;/strong&gt;&lt;br /&gt;
+원격 저장소(origin)에 로컬 브랜치(master)의 commit을 저장
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pull&lt;/strong&gt;&lt;br /&gt;
+클라이언트로 내려받는 명령어 ( origin의 내용을 master로 복사 )
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git pull origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;clone&lt;/strong&gt; &lt;br /&gt;
+서버의 프로젝트를 내려받는 명령어
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git clone 저장소주소
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;reset&lt;/strong&gt; &lt;br /&gt;
+이전 상태로 되돌리기
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# commit 후의 Unmodifed에서 commit 직전의 Staged 상태로&lt;/span&gt;
+  git reset &lt;span class=&quot;nt&quot;&gt;--soft&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Unmodified에서 commit 전의 Modified 상태로 ( 기본 옵셥 )&lt;/span&gt;
+  git reset &lt;span class=&quot;nt&quot;&gt;--mixed&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Unmodified에서 commit 전의 Unmodified로&lt;/span&gt;
+  git reset &lt;span class=&quot;nt&quot;&gt;--hard&lt;/span&gt;
+    
+  &lt;span class=&quot;c&quot;&gt;# HEAD가 현재 commit의 위치&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# ~1 은 commit 1개 전으로 되돌아가기&lt;/span&gt;
+  git reset HEAD~1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;revert&lt;/strong&gt; &lt;br /&gt;
+reset과 똑같이 되돌아가면서 내용을 새 commit으로 만들어서 저장
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;# 현재 HEAD를 취소하고 이전 HEAD로 돌아간다&lt;/span&gt;
+  git revert HEAD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h6&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ZeroCho TV: &lt;a href=&quot;https://www.zerocho.com/&quot; target=&quot;_blank&quot;&gt;https://www.zerocho.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Kim CheolIn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="command" />
+      
+
+      
+        <summary type="html">GitHub GitHub(1) - 자주쓰는 명령어 GitHub(2) - 브랜치(Branch) 관리 GitHub(3) - 유용한 명령어</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">SQL 명령어</title>
+      <link href="https://in8989.github.io/sql-command1" rel="alternate" type="text/html" title="SQL 명령어" />
+      <published>2022-02-10T19:00:00+09:00</published>
+      <updated>2022-02-10T19:00:00+09:00</updated>
+      <id>https://in8989.github.io/sql-command1</id>
+      <content type="html" xml:base="https://in8989.github.io/sql-command1">&lt;h3 id=&quot;sql-자주쓰는-명령어&quot;&gt;SQL 자주쓰는 명령어&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DB 접속
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;mysql -u {계정ID} -p;
+mysql -u {계정ID} -p {DB 이름};
+mysql -u {계정ID} -p {계정PW};
+mysql -u {계정ID} -p {계정PW} {DB 이름};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CREATE ( DB, TABLE 생성)
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;CREATE DATABASE {테이블명} CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE TABLE {테이블명} 
+(
+  {칼럼명1} {데이터타입1}
+  {칼럼명2} {데이터타입2}
+  …
+);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;USE
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;USE {테이블명};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DROP
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;DROP DATABASE {테이블명};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ALTER (추가, 수정, 삭제)
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;ALTER TABLE {테이블명} ADD {컬럼명}{데이터타입};
+ALTER TABLE {테이블명} MODIFY COLUMN {컬럼명}{데이터타입};
+ALTER TABLE {테이블명} DROP {컬럼명};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SELECT
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;SELECT * FROM {테이블명};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;INSERT
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;INSERT INTO {테이블명} VALUES ({값1}, {값2}, {값3}…);
+INSERT INTO {테이블명}({필드이름1}{필드이름2}{필드이름3}) VALUES ({값1}, {값2}, {값3});
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;UPDATE ( 안전을 위해 조건 필수 )
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;UPDATE {테이블명} SET {컬럼명}=&apos;값&apos; WHERE {조건};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DELETE ( 안전을 위해 조건 필수 )
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;DELETE FROM {테이블명} WHERE {조건};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PK 초기화
+    &lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;ALTER TABLE {테이블명} AUTO_INCREMENT = 1;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Join
+    &lt;pre&gt;&lt;code class=&quot;language-mymysql&quot;&gt;SELECT
+{테이블명1}.{컬럼명1},
+{테이블명2}.{컬럼명2}
+FROM {테이블명1}
+JOIN {테이블명2}
+ON {테이블명1}.{컬럼명1} = {테이블명2}.{컬럼명2};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Kim CheolIn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="command" />
+      
+
+      
+        <summary type="html">SQL 자주쓰는 명령어</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
